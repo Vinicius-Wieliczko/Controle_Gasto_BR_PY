@@ -8,10 +8,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'senha1',
-    database: 'controle_financeiro'
+    host: 'b2vfddliavvfeednxpij-mysql.services.clever-cloud.com',
+    user: 'ujmhviecwq45kmro',
+    password: '8HBUYI2X1kxq00gY5zEu',
+    database: 'b2vfddliavvfeednxpij'
 });
 
 db.connect((err) => {
