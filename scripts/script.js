@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/transacoes';
+const API_URL = 'https://controle-gasto-br-py.onrender.com';
 
 const form = document.getElementById('form-transacao');
 const listaTransacoesDOM = document.getElementById('lista-transacoes');
