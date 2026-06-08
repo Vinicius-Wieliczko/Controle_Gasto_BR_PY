@@ -10,7 +10,7 @@ const cotacaoInfoDOM = document.getElementById('cotacao-info');
 let cotacaoGuarani = 1; 
 
 function buscarCotacao() {
-    fetch('https://economia.awesomeapi.com.br/last/BRL-PYG')
+    fetch('https://api.exchangerate-api.com/v4/latest/BRL')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro na requisição da API');
@@ -18,8 +18,10 @@ function buscarCotacao() {
             return response.json();
         })
         .then(dados => {
-            cotacaoGuarani = parseFloat(dados.BRLPYG.ask);
+            cotacaoGuarani = parseFloat(dados.rates.PYG);
+            
             cotacaoInfoDOM.textContent = `Cotação de Hoje: R$ 1,00 = Gs ${cotacaoGuarani.toLocaleString('es-PY')}`;
+            
             carregarTransacoes();
         })
         .catch(erro => {
