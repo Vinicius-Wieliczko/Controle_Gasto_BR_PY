@@ -8,17 +8,19 @@ Sistema web de controle financeiro com suporte a múltiplas moedas (BRL e PYG), 
 - Banco de Dados MySQL
 - Consumo da AwesomeAPI (Câmbio) via Fetch API
 
-## Como executar o projeto
+## Instruções Básicas de Execução (Teste Local)
+Caso a avaliação seja feita rodando o projeto localmente, siga os passos abaixo:
 
-1. **Banco de Dados:**
-   - Abra o MySQL Workbench ou seu gerenciador preferido.
-   - Execute o script contido no arquivo `controle_financeiro.sql` para criar o banco de dados e a tabela.
-   - Se necessário, atualize as credenciais (usuário e senha) no arquivo `app.js`.
+**Passo A: Banco de Dados**
+1. Abra o seu gerenciador do MySQL.
+2. Execute o script `controle_financeiro.sql` para criar a tabela necessária.
+3. No arquivo `app.js`, insira as credenciais locais do seu banco de dados (usuário e senha).
 
-2. **Backend:**
-   - Abra o terminal na pasta do projeto.
-   - Instale as dependências executando: `npm install express mysql2 cors`
-   - Inicie o servidor executando: `node app.js`
+**Passo B: Backend (Node.js)**
+1. Abra o terminal na pasta do projeto.
+2. Instale as dependências executando o comando: `npm install`
+3. Inicie o servidor executando: `node app.js`
 
-3. **Frontend:**
-   - Com o servidor rodando, basta abrir o arquivo `index.html` em qualquer navegador.
+**Passo C: Frontend**
+1. No arquivo `script.js`, altere a constante `API_URL` para apontar para o servidor local: `http://localhost:3000/api/transacoes`
+2. Abra o arquivo `index.html` em qualquer navegador.
